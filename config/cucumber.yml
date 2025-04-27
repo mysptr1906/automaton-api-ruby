@@ -1,0 +1,2 @@
+default: --format json --out=cucumber-report.json --format AllureCucumber::CucumberFormatter --format pretty --out
+without-cucumber-report: --format AllureCucumber::CucumberFormatter --format pretty --out

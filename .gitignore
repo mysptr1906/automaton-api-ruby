@@ -1,0 +1,6 @@
+.env
+allure-results
+allure-report
+debug.rb
+logger
+cucumber-report.json
