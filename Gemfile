@@ -1,12 +1,10 @@
 source "https://rubygems.org"
 
-
-# Please add specific version for each lib 
-gem 'cucumber'
-gem 'httparty'
-gem 'rspec'
-gem 'jsonpath'
-gem 'json-schema'
-gem 'dotenv'
-gem 'json_matchers', '0.10.0'
-gem 'allure-cucumber'
+gem "cucumber", "~> 9.2", ">= 9.2.1"
+gem "httparty", "~> 0.22.0"
+gem "rspec", "~> 3.13"
+gem "jsonpath", "~> 1.1", ">= 1.1.5"
+gem "json-schema", "~> 5.1", ">= 5.1.1"
+gem "dotenv", "~> 3.1", ">= 3.1.7"
+gem "json_matchers", "~> 0.10.0"
+gem "allure-cucumber", "~> 2.25"
