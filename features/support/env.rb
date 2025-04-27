@@ -27,7 +27,7 @@ include RSpec::Matchers
 AllureCucumber.configure do |config|
   config.results_directory = "allure-results"
   config.clean_results_directory = true
-  config.logging_level = ENV["CI_COMMIT_BRANCH"].nil? ? Logger::DEBUG : Logger::ERROR #Kasih kondisi debug kalau run di local aja
+  config.logging_level = Logger::ERROR 
 end
 
 # CI_COMMIT_BRANCH=branch cucumber --tags @TEST_STEP1
