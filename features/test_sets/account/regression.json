@@ -1,0 +1,12 @@
+[
+  {
+    "feature": "stockbitLogin"
+  },
+  {
+    "feature": "testAllSteps",
+    "tests": [
+      "[API] Generate random text",
+      "[API] Define ENV step"
+    ]
+  }
+]

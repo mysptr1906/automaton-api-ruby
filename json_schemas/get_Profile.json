@@ -1,0 +1,494 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "message": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "created_at": {
+            "type": "string"
+          },
+          "statistics": {
+            "type": "object",
+            "properties": {
+              "follower_count": {
+                "type": "integer"
+              },
+              "following_count": {
+                "type": "integer",
+                "minLength": 0
+              },
+              "reputation_count": {
+                "type": "integer"
+              },
+              "idea_count": {
+                "type": "integer"
+              },
+              "like_count": {
+                "type": "integer"
+              },
+              "view_count": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "follower_count",
+              "following_count",
+              "reputation_count",
+              "idea_count",
+              "like_count",
+              "view_count"
+            ]
+          },
+          "profile": {
+            "type": "object",
+            "properties": {
+              "username": {
+                "type": "string",
+                "minLength": 3,
+                "maxLength": 20                
+              },
+              "fullname": {
+                "type": "string"
+              },
+              "about": {
+                "type": "string"
+              },
+              "website": {
+                "type": "string"
+              },
+              "avatar": {
+                "type": "object",
+                "properties": {
+                  "default": {
+                    "type": "string"
+                  },
+                  "medium": {
+                    "type": "string"
+                  },
+                  "thumb": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "default",
+                  "medium",
+                  "thumb"
+                ]
+              },
+              "country": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              },
+              "gender": {
+                "type": "string"
+              },
+              "location": {
+                "type": "string"
+              },
+              "address": {
+                "type": "string"
+              },
+              "birthday": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "object",
+                "properties": {
+                  "country_code": {
+                    "type": "string"
+                  },
+                  "national_number": {
+                    "type": "string"
+                  },
+                  "formatted": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "country_code",
+                  "national_number",
+                  "formatted"
+                ]
+              },
+              "occupation": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "username",
+              "fullname",
+              "about",
+              "website",
+              "avatar",
+              "country",
+              "language",
+              "gender",
+              "location",
+              "address",
+              "birthday",
+              "phone",
+              "occupation"
+            ]
+          },
+          "privilege": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "code": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "name",
+              "code"
+            ]
+          },
+          "exchange": {
+            "type": "string"
+          },
+          "ir_symbols": {
+            "type": "array",
+            "items": {
+              "items": {}
+            }
+          },
+          "badges": {
+            "type": "object",
+            "properties": {
+              "is_verified": {
+                "type": "boolean"
+              },
+              "is_top": {
+                "type": "boolean"
+              },
+              "is_trending": {
+                "type": "boolean"
+              },
+              "trending_label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "is_verified",
+              "is_top",
+              "is_trending",
+              "trending_label"
+            ]
+          },
+          "is_alert_enabled": {
+            "type": "boolean"
+          },
+          "is_blocked": {
+            "type": "boolean"
+          },
+          "is_followed": {
+            "type": "boolean"
+          },
+          "email": {
+            "type": "string"
+          },
+          "last_modified_at": {
+            "type": "string"
+          },
+          "last_login_at": {
+            "type": "string"
+          },
+          "has_password": {
+            "type": "boolean"
+          },
+          "is_newsletter_subscriber": {
+            "type": "boolean"
+          },
+          "is_activated": {
+            "type": "boolean"
+          },
+          "is_phone_verified": {
+            "type": "boolean"
+          },
+          "is_shown_in_discovery": {
+            "type": "boolean"
+          },
+          "preferences": {
+            "type": "object",
+            "properties": {
+              "privacy": {
+                "type": "object",
+                "properties": {
+                  "is_hide_facebook": {
+                    "type": "boolean"
+                  },
+                  "is_hide_email": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "is_hide_facebook",
+                  "is_hide_email"
+                ]
+              },
+              "stream": {
+                "type": "object",
+                "properties": {
+                  "version": {
+                    "type": "string"
+                  },
+                  "has_version_2_explained": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "version",
+                  "has_version_2_explained"
+                ]
+              },
+              "securities": {
+                "type": "object",
+                "properties": {
+                  "orderbook_info": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "orderbook_info"
+                ]
+              }
+            },
+            "required": [
+              "privacy",
+              "stream",
+              "securities"
+            ]
+          },
+          "onboarding": {
+            "type": "object",
+            "properties": {
+              "current_step": {
+                "type": "integer"
+              },
+              "is_done": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "current_step",
+              "is_done"
+            ]
+          },
+          "free_trial": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "expired_at": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "code",
+              "expired_at"
+            ]
+          },
+          "sns": {
+            "type": "object",
+            "properties": {
+              "google_id": {
+                "type": "string"
+              },
+              "apple_id": {
+                "type": "string"
+              },
+              "facebook_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "google_id",
+              "apple_id",
+              "facebook_id"
+            ]
+          },
+          "trading": {
+            "type": "object",
+            "properties": {
+              "account_id": {
+                "type": "integer"
+              },
+              "is_pro": {
+                "type": "boolean"
+              },
+              "has_realtrading_access": {
+                "type": "boolean"
+              },
+              "securities_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "account_id",
+              "is_pro",
+              "has_realtrading_access",
+              "securities_id"
+            ]
+          },
+          "support": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "intercom": {
+                "type": "object",
+                "properties": {
+                  "app_id": {
+                    "type": "string"
+                  },
+                  "user_hash": {
+                    "type": "string"
+                  },
+                  "user_id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  },
+                  "register_country": {
+                    "type": "string"
+                  },
+                  "active_country": {
+                    "type": "string"
+                  },
+                  "subs": {
+                    "type": "string"
+                  },
+                  "created_at": {
+                    "type": "string"
+                  },
+                  "sms": {
+                    "type": "integer"
+                  },
+                  "phone": {
+                    "type": "string"
+                  },
+                  "virtual_trading": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "app_id",
+                  "user_hash",
+                  "user_id",
+                  "name",
+                  "email",
+                  "register_country",
+                  "active_country",
+                  "subs",
+                  "created_at",
+                  "sms",
+                  "phone",
+                  "virtual_trading"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "intercom"
+            ]
+          },
+          "pro": {
+            "type": "object",
+            "properties": {
+              "is_pro": {
+                "type": "boolean"
+              },
+              "active_since": {
+                "type": "string"
+              },
+              "expired_at": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "is_pro",
+              "active_since",
+              "expired_at"
+            ]
+          },
+          "ban": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "integer"
+              },
+              "type": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "string"
+              },
+              "until": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "code",
+              "type",
+              "reason",
+              "until"
+            ]
+          },
+          "onesignal_hash": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "created_at",
+          "statistics",
+          "profile",
+          "privilege",
+          "exchange",
+          "ir_symbols",
+          "badges",
+          "is_alert_enabled",
+          "is_blocked",
+          "is_followed",
+          "email",
+          "last_modified_at",
+          "last_login_at",
+          "has_password",
+          "is_newsletter_subscriber",
+          "is_activated",
+          "is_phone_verified",
+          "is_shown_in_discovery",
+          "preferences",
+          "onboarding",
+          "free_trial",
+          "sns",
+          "trading",
+          "support",
+          "pro",
+          "ban",
+          "onesignal_hash"
+        ]
+      }
+    },
+    "required": [
+      "message",
+      "data"
+    ]
+  }

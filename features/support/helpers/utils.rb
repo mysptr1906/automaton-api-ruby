@@ -1,3 +1,5 @@
+require "rspec/expectations"
+
 class Utils
   extend RSpec::Matchers
 
@@ -34,7 +36,7 @@ class Utils
     end
 
     def get_json_value(json, path)
-      JsonPath.new(json_path).on(json).first
+      JsonPath.new(path).on(json).first
     end
 
     def numeric?(str)
